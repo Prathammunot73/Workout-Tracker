@@ -6,11 +6,11 @@ HEIGHT_CM=160
 AGE=21
 GENDER="male"
 
-APP_ID="app_e1ac6a8dc0a940b9bd06af51"
-API_KEY="nix_live_b3zbOvbFXxXzeYH35YJxBAIWMUUYIfwJ"
+APP_ID = "YOUR NUTRITIONIX APP ID"
+API_KEY = "YOUR NUTRITIONIX API KEY"
 
 exercise_endpoint="https://app.100daysofpython.dev/v1/nutrition/natural/exercise"
-sheet_endpoint="https://api.sheety.co/fa179106036defe96a8eafa0f261bfec/workoutTracking/workouts"
+sheet_endpoint="YOUR SHEETY ENDPOINT"
 
 exercise_text=input("Which exercise you did: ")
 
