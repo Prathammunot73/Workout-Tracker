@@ -6,11 +6,13 @@ HEIGHT_CM=160
 AGE=21
 GENDER="male"
 
-APP_ID = "YOUR NUTRITIONIX APP ID"
-API_KEY = "YOUR NUTRITIONIX API KEY"
+APP_ID="YOUR APP ID"
+API_KEY="YOUR API KEY"
+SHEETY_USERNAME="YOUR SHEETY USERNAME"
+SHEETY_PASSWORD="YOUR SHEETY PASSWORD"
 
 exercise_endpoint="https://app.100daysofpython.dev/v1/nutrition/natural/exercise"
-sheet_endpoint="YOUR SHEETY ENDPOINT"
+sheet_endpoint="SHEETY ENDPOINT"
 
 exercise_text=input("Which exercise you did: ")
 
@@ -29,7 +31,6 @@ parameters={
 
 response=requests.post(url=exercise_endpoint,json=parameters,headers=headers)
 result=response.json()
-print(result)
 
 today=datetime.now().strftime("%d/%m/%Y")
 now_time=datetime.now().strftime("%X")
@@ -45,5 +46,5 @@ for exercise in result["exercises"]:
         }
     }
 
-    sheet_response=requests.post(sheet_endpoint,json=sheet_inputs)
+    sheet_response=requests.post(sheet_endpoint,json=sheet_inputs,auth=(SHEETY_USERNAME,SHEETY_PASSWORD))
     print(sheet_response.text)
