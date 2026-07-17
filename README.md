@@ -2,8 +2,6 @@
 
 A simple Workout Tracker built using Python that records daily exercises and stores them in a Google Sheet using the Nutritionix and Sheety APIs.
 
-Built as part of the **100 Days of Code: The Complete Python Pro Bootcamp**.
-
 ## ✨ Features
 
 - Accepts exercise details in natural language.
